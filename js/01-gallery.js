@@ -21,7 +21,8 @@ function createMarkup (arr) {
 
 function handleClick(event) {
     event.preventDefault();
-    // const currentItem = event.target;
+  if (event.target.nodeName !== "IMG")
+    return;
     const instance = basicLightbox.create(`
     <img src="${event.target.dataset.source}" width="1280">
 `)
