@@ -28,6 +28,10 @@ function handleClick(event) {
 `)
 
 instance.show()
-    console.log(event.target);
+  galleryList.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      instance.close()
+    }
+  });
 }
 
